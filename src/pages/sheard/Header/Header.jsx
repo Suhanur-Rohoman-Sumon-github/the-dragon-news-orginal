@@ -5,6 +5,7 @@ import { Button, Container, Nav,  Navbar } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
 const Header = () => {
     return (
+        <div>
         <Container >
             <div className="text-center">
                 <img src={logo} alt="" />
@@ -38,6 +39,7 @@ const Header = () => {
                 </Navbar>
             </div>
         </Container>
+        </div>
     );
 };
 
