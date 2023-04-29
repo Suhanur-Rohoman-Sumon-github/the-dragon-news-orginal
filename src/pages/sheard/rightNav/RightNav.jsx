@@ -9,8 +9,8 @@ const RightNav = () => {
         <div>
             <div>
                 <h4>login with</h4>
-                <Button variant="outline-primary w-100"> <FaGoogle /> Primary</Button> <br />
-                <Button className='mt-4' variant="outline-secondary w-100"><FaGithub /> Secondary</Button>
+                <Button variant="outline-primary w-100"> <FaGoogle /> login with google</Button> <br />
+                <Button className='mt-4' variant="outline-secondary w-100"><FaGithub /> login with github</Button>
             </div>
             <div className='mt-5'>
                 <h4>find us on </h4>
