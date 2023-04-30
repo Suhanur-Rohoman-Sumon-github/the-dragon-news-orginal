@@ -6,7 +6,7 @@ import { FaUserCircle } from 'react-icons/fa';
 
 const NavigationBar = () => {
 
-    const { user } = useContext(AuthContext)
+    // const { user } = useContext(AuthContext)
 
     return (
         <div>
@@ -14,17 +14,16 @@ const NavigationBar = () => {
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mx-auto">
-                            <Nav.Link href="#features"><Link to={'/'}>Home</Link></Nav.Link>
+                        <Nav className="mx-auto"><Link to={'/'}>Home</Link>
                             <Nav.Link href="#pricing">About</Nav.Link>
                             <Nav.Link href="#Career">Career</Nav.Link>
                         </Nav>
                         <Nav>
-                            {user &&  <FaUserCircle style={{ fontSize: '40px' }} />}
-                                {user ? <Button variant="dark">log out</Button> :
+                             <FaUserCircle style={{ fontSize: '40px' }} />
+                                <Button variant="dark">log out</Button> :
                                     <Link to={'/login'}>
                                         <Button variant="dark">login</Button>
-                                    </Link>}
+                                    </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
