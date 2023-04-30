@@ -6,6 +6,8 @@ import SingleNews from "../pages/SingleNews/SingleNews/SingleNews";
 import LoginLayouts from "../layouts/LoginLayouts";
 import Login from "../pages/Login/Login/Login";
 import Register from "../pages/Login/Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import Terms from "../pages/sheard/Terms/Terms";
 
 
 const router = createBrowserRouter([
@@ -25,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register />
+            },
+            {
+                path:'/terms',
+                element:<Terms />
             }
         ]
     },
@@ -43,7 +49,7 @@ const router = createBrowserRouter([
     },
     {
         path:'news',
-        element:<News ></News>,
+        element:<PrivateRoute ><News ></News></PrivateRoute>,
         children:[{
             path:':id',
             element:<SingleNews ></SingleNews>,
