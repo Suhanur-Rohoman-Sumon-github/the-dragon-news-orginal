@@ -9,7 +9,7 @@ const Leftnav = () => {
     const [catagoris, setCatagorise] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/catagoris')
+        fetch('https://the-dragon-server-side-su44248124.vercel.app/catagoris')
             .then(res => res.json())
             .then(data => setCatagorise(data))
             .catch(error => console.error(error))

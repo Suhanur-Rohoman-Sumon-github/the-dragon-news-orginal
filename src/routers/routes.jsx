@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             {
                 path:':id',
                 element:<Catagories ></Catagories>,
-                loader:({params})=>fetch(`http://localhost:5000/catagoris/${params.id}`)
+                loader:({params})=>fetch(`https://the-dragon-server-side-su44248124.vercel.app/catagoris/${params.id}`)
             },
         ]
         
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         children:[{
             path:':id',
             element:<SingleNews ></SingleNews>,
-            loader:({params})=>fetch(`http://localhost:5000/news/${params.id}`)
+            loader:({params})=>fetch(`https://the-dragon-server-side-su44248124.vercel.app/news/${params.id}`)
         }]
     }
 ])
